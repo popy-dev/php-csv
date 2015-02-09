@@ -88,12 +88,8 @@ class StreamReader extends AbstractCsv implements Reader {
                 $this->options->getEscape()
             );
 
-            if ($this->current === false) {
+            if ($this->current === false || $this->current === null) {
                 throw new ReadStreamException($this, error_get_last());
-            }
-
-            if ($this->current === null) {
-                throw new ReadException('Invalid stream');
             }
 
             if (count($this->current) === 1 && reset($this->current) === null) {
