@@ -2,7 +2,8 @@
 It is a fully object-oriented CSV reading (soon writing) toolkit, providing various classes to ease CSV file manipulations
 
 ## Installation
-To be done :/
+
+php composer.phar require popy-dev/php-csv:dev-master
 
 ## Basic usage
 ```php
