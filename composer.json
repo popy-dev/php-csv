@@ -1,5 +1,9 @@
 {
     "name": "popy-dev/php-csv",
+    "type": "library",
+    "description": "CSV manipulating tools for PHP",
+    "keywords": ["csv"],
+    "homepage": "https://github.com/popy-dev/php-csv",
     "license": "MIT",
     "authors": [
         {
