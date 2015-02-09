@@ -22,7 +22,7 @@ class ReaderFactory {
      * 
      * @return ReaderBuilder
      */
-    public function build()
+    public function getBuilder()
     {
         return new ReaderBuilder($this);
     }

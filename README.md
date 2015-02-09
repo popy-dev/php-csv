@@ -5,6 +5,11 @@ It is a fully object-oriented CSV reading (soon writing) toolkit, providing vari
 
 php composer.phar require popy-dev/php-csv:dev-master
 
+## Documentation
+
+1. [Basic Usage](#basic-usage)
+2. [Factory](doc/FACTORY.md)
+
 ## Basic usage
 ```php
 <?php
