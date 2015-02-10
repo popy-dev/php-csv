@@ -16,7 +16,8 @@ use Popy\Csv\Reader\NamedColumnReader;
 /**
  * Reader factory
  */
-class ReaderFactory {
+class ReaderFactory
+{
     /**
      * Builds a workbench instance
      * 

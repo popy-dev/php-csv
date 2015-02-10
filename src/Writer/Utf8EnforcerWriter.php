@@ -7,7 +7,8 @@ use Popy\Csv\WritableWriter;
 /**
  * Wraps a WritableWriter in order to enforce UTF8 charset usage by prepending a BOM
  */
-class Utf8EnforcerWriter extends AbstractWriterWrapper implements WritableWriter {
+class Utf8EnforcerWriter extends AbstractWriterWrapper implements WritableWriter
+{
     const UTF8_BOM = "\xEF\xBB\xBF";
 
     /**

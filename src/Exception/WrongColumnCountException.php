@@ -2,15 +2,15 @@
 
 namespace Popy\Csv\Exception;
 
-use Exception;
+use Exception, RuntimeException;
 use Popy\Csv\Reader;
 use Popy\Csv\Reader\NamedColumnReader;
 
 /**
  * Read operation exception raised by NamedColumnReader
  */
-class WrongColumnCountException extends ReadException implements IOException {
-    
+class WrongColumnCountException extends RuntimeException implements ReadException
+{
     /**
      * Csv reader triggering the exception
      * @var Reader

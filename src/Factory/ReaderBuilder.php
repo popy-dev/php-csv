@@ -8,7 +8,8 @@ use Popy\Csv\Factory\ReaderFactory;
 /**
  * Provides a chainable access to the factory methods
  */
-class ReaderBuilder {
+class ReaderBuilder
+{
 
     /**
      * Factory

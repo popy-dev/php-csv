@@ -7,7 +7,8 @@ use Popy\Csv\Reader;
 /**
  * CharsetConverterReader : wraps a Csv reader in order ton convert the readed charset into another
  */
-class CharsetConverterReader extends AbstractReaderWrapper {
+class CharsetConverterReader extends AbstractReaderWrapper
+{
     /**
      * Input reader/file charset
      * 

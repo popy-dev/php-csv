@@ -7,7 +7,8 @@ use Popy\Csv\Reader;
 /**
  * AutoNamedColumnReader : wraps a CSV reader and uses the first row as header list
  */
-class AutoNamedColumnReader extends NamedColumnReader {
+class AutoNamedColumnReader extends NamedColumnReader
+{
     /**
      * Class constructor
      * 

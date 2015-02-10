@@ -5,6 +5,7 @@ namespace Popy\Csv\Exception;
 /**
  * Read operation exception raised by NamedColumnReader
  */
-class ReadStreamException extends AbstractStreamException implements ReadException {
+class StreamReadException extends AbstractStreamException implements ReadException
+{
     
 }

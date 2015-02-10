@@ -8,7 +8,8 @@ use Popy\Csv\WritableWriter;
 /**
  * SplFileObjectWriter
  */
-class SplFileObjectWriter extends AbstractWriter implements WritableWriter {
+class SplFileObjectWriter extends AbstractWriter implements WritableWriter
+{
     /**
      * Output stream
      * 

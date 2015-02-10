@@ -5,7 +5,8 @@ namespace Popy\Csv;
 /**
  * Helper class
  */
-class AbstractCsv implements Csv {
+class AbstractCsv implements Csv
+{
     /**
      * Csv option container
      * 

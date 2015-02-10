@@ -5,7 +5,8 @@ namespace Popy\Csv;
 /**
  * CSV Options container
  */
-class Options {
+class Options
+{
 
     /**
      * CSV delimiter control char

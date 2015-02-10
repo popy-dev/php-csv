@@ -9,7 +9,8 @@ use Popy\Csv\Exception\WrongColumnCountException;
 /**
  * "Named column" reader : wraps a Reader and name the resulting rows
  */
-class NamedColumnReader extends AbstractReaderWrapper implements Reader {
+class NamedColumnReader extends AbstractReaderWrapper implements Reader
+{
     /**
      * Column headers
      * 

@@ -8,7 +8,8 @@ use Popy\Csv\Writer;
 /**
  * Wraps a Writer in order to convert the data charset
  */
-class CharsetConverterWriter extends AbstractWriterWrapper {
+class CharsetConverterWriter extends AbstractWriterWrapper
+{
     /**
      * Input reader/file charset
      * 

@@ -11,7 +11,8 @@ use Popy\Csv\Exception\ReadStreamException;
 /**
  * Reads a stream
  */
-class StreamReader extends AbstractCsv implements Reader {
+class StreamReader extends AbstractCsv implements Reader
+{
     /**
      * Stream
      * 
@@ -64,7 +65,7 @@ class StreamReader extends AbstractCsv implements Reader {
 
         if ($meta['seekable']) {
             if (fseek($this->stream, 0) === -1) {
-                throw new ReadStreamException($this, error_get_last());
+                throw new StreamReadException($this, error_get_last());
             }
         }
 
@@ -89,7 +90,7 @@ class StreamReader extends AbstractCsv implements Reader {
             );
 
             if ($this->current === false || $this->current === null) {
-                throw new ReadStreamException($this, error_get_last());
+                throw new StreamReadException($this, error_get_last());
             }
 
             if (count($this->current) === 1 && reset($this->current) === null) {

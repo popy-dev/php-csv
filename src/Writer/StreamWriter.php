@@ -7,7 +7,8 @@ use Popy\Csv\WritableWriter;
 /**
  * StreamWriter
  */
-class StreamWriter extends AbstractWriter implements WritableWriter {
+class StreamWriter extends AbstractWriter implements WritableWriter
+{
     /**
      * Output stream
      * 
@@ -48,7 +49,7 @@ class StreamWriter extends AbstractWriter implements WritableWriter {
         );
 
         if ($res === false) {
-            throw new ReadStreamException($this, error_get_last());
+            throw new StreamWriteException($this, error_get_last());
         }
     }
 
@@ -60,7 +61,7 @@ class StreamWriter extends AbstractWriter implements WritableWriter {
         $res = fwrite($this->stream, $data);
 
         if ($res === false) {
-            throw new ReadStreamException($this, error_get_last());
+            throw new StreamWriteException($this, error_get_last());
         }
 
         return $this;

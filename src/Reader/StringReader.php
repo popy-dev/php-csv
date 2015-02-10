@@ -5,7 +5,8 @@ namespace Popy\Csv\Reader;
 /**
  * Reads a string as CSV
  */
-class StringReader extends AbstractReaderWrapper {
+class StringReader extends AbstractReaderWrapper
+{
     /**
      * Class constructor : initialize a stream in memory containing the string to read
      * 

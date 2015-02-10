@@ -8,7 +8,8 @@ use Popy\Csv\Writer;
 /**
  * Exception thrown when a non array/traversable row is given to a Writer
  */
-class InvalidInputRow extends InvalidArgumentException implements WriteException {
+class InvalidInputRow extends InvalidArgumentException implements WriteException
+{
     
     /**
      * Writer triggering the exception

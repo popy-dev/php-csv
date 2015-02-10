@@ -5,12 +5,13 @@ namespace Popy\Csv\Reader;
 use SeekableIterator;
 use RuntimeException;
 use SplFileInfo, SplFileObject;
-use Popy\Csv\Exception\ReadException;
+use Popy\Csv\Exception\SplFileObjectRewindException;
 
 /**
  * SplFileInfo CSV Reader (wraps a SplFileInfo instance)
  */
-class SplFileInfoReader extends AbstractIteratorWrapper implements SeekableIterator {
+class SplFileInfoReader extends AbstractIteratorWrapper implements SeekableIterator
+{
     /**
      * Class constructor
      * 
@@ -33,7 +34,7 @@ class SplFileInfoReader extends AbstractIteratorWrapper implements SeekableItera
         try {
             parent::rewind();
         } catch (RuntimeException $e) {
-            throw new ReadException($e->getMessage(), $e->getCode(), $e);
+            throw new SplFileObjectRewindException($this, 0, $e);
         }
     }
 
