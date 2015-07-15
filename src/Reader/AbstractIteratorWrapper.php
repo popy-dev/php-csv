@@ -3,28 +3,19 @@
 namespace Popy\Csv\Reader;
 
 use Iterator;
-use Popy\Csv\AbstractCsv;
 use Popy\Csv\Reader;
 
 /**
- * AbstractIteratorWrapper
+ * AbstractIteratorWrapper.
  */
-abstract class AbstractIteratorWrapper extends AbstractCsv implements Reader {
+abstract class AbstractIteratorWrapper implements Reader
+{
     /**
-     * Internal iterator
-     * 
+     * Internal iterator.
+     *
      * @var Iterator
      */
     protected $internal;
-
-    /**
-     * Class destructor
-     */
-    public function __destruct()
-    {
-        $this->internal = null;
-        $this->options = null;
-    }
 
     /**
      * {@inheritDoc}
@@ -66,4 +57,3 @@ abstract class AbstractIteratorWrapper extends AbstractCsv implements Reader {
         return $this->internal->key();
     }
 }
-

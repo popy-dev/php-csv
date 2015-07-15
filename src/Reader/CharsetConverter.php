@@ -2,37 +2,37 @@
 
 namespace Popy\Csv\Reader;
 
-use Popy\Csv\Reader;
+use Iterator;
 
 /**
- * CharsetConverterReader : wraps a Csv reader in order ton convert the readed charset into another
+ * CharsetConverter Reader : wraps a Csv reader in order ton convert the readed charset into another.
  */
-class CharsetConverterReader extends AbstractReaderWrapper
+class CharsetConverter extends AbstractIteratorWrapper
 {
     /**
-     * Input reader/file charset
-     * 
+     * Input reader/file charset.
+     *
      * @var string
      */
     protected $from;
 
     /**
-     * Output charset
-     * 
+     * Output charset.
+     *
      * @var string
      */
     protected $to;
 
     /**
-     * Class constructor
-     * 
-     * @param Reader $reader Wrapper reader
-     * @param string $from   Input charset
-     * @param string $to     Output charset
+     * Class constructor.
+     *
+     * @param Iterator $internal Internal iterator
+     * @param string   $from     Input charset
+     * @param string   $to       Output charset
      */
-    public function __construct(Reader $reader, $from, $to = 'utf-8')
+    public function __construct(Iterator $internal, $from, $to = 'utf-8')
     {
-        $this->internal = $reader;
+        $this->internal = $internal;
         $this->from = $from;
         $this->to = $to;
     }
@@ -59,4 +59,3 @@ class CharsetConverterReader extends AbstractReaderWrapper
         return $row;
     }
 }
-

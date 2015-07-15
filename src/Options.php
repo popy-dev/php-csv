@@ -3,31 +3,30 @@
 namespace Popy\Csv;
 
 /**
- * CSV Options container
+ * CSV Options container.
  */
 class Options
 {
-
     /**
-     * CSV delimiter control char
-     * 
+     * CSV delimiter control char.
+     *
      * @var string
      */
     protected $delimiter = ',';
-    
+
     /**
-     * CSV enclosure control char
-     * 
+     * CSV enclosure control char.
+     *
      * @var string
      */
     protected $enclosure = '"';
 
     /**
-     * Set delimiter option value
-     * 
+     * Set delimiter option value.
+     *
      * @param string $delimiter delimiter option value
      *
-     * @return  self [description]
+     * @return self [description]
      */
     public function setDelimiter($delimiter)
     {
@@ -37,8 +36,8 @@ class Options
     }
 
     /**
-     * Get delimiter option value
-     * 
+     * Get delimiter option value.
+     *
      * @return string
      */
     public function getDelimiter()
@@ -47,10 +46,11 @@ class Options
     }
 
     /**
-     * Set enclosure option value
-     * 
+     * Set enclosure option value.
+     *
      * @param string $enclosure enclosure option value
-     * @return  self [description]
+     *
+     * @return self [description]
      */
     public function setEnclosure($enclosure)
     {
@@ -60,8 +60,8 @@ class Options
     }
 
     /**
-     * Get enclosure option value
-     * 
+     * Get enclosure option value.
+     *
      * @return string
      */
     public function getEnclosure()
@@ -74,8 +74,8 @@ class Options
      * /!\ This method is here only to have consistency with php fgetcsv strange signature/behaviour
      *     The CSV RFC tells that there is no escape char, as the enclosure is meant to be escaped
      *     by itself. Moreover, the $escape parameter does not seems to be used at all by fputcsv,
-     *     and is not correctly stripped by php when used
-     * 
+     *     and is not correctly stripped by php when used.
+     *
      * @return string
      */
     public function getEscape()
